@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Check, MousePointerClick, Palette, Rocket, PenLine } from "lucide-react";
 import Header, { Marca } from "@/components/catalogo/Header";
 import Reveal from "@/components/catalogo/Reveal";
-import { contatoUrl, modelos } from "@/data/modelos";
+import { contatoUrl, modelosPublicos as modelos } from "@/data/modelos";
 
 const fundoEscuro = "bg-[linear-gradient(135deg,#0F172A_0%,#1E293B_55%,#163B5B_100%)]";
 

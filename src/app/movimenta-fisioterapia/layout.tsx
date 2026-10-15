@@ -15,6 +15,6 @@ export const viewport: Viewport = {
   themeColor: "#F3F3F3",
 };
 
-export default function ClinicaRosaLayout({ children }: LayoutProps<"/clinica-rosa">) {
+export default function MovimentaLayout({ children }: LayoutProps<"/movimenta-fisioterapia">) {
   return <div className={`${marcellus.variable} ${jost.variable} ${allura.variable}`}>{children}</div>;
 }

@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   title: "Sara Scapini — Pilates com atenção ao seu movimento",
   description:
     "Aulas particulares de pilates, planejadas para o seu corpo e o seu momento. Também atendimentos de fisioterapia e massoterapia.",
+  // Modelo privado: só abre pelo link enviado ao cliente.
+  robots: { index: false, follow: false },
 };
 
 export const viewport: Viewport = {

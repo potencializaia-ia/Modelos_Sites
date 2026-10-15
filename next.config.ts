@@ -4,6 +4,10 @@ import type { NextConfig } from "next";
 const modelosVite = ["dentora"];
 
 const nextConfig: NextConfig = {
+  // Endereços antigos que já podem ter sido enviados a clientes.
+  async redirects() {
+    return [{ source: "/clinica-rosa", destination: "/movimenta-fisioterapia", permanent: true }];
+  },
   async rewrites() {
     return modelosVite.map((modelo) => ({
       source: `/${modelo}`,

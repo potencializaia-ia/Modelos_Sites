@@ -1,11 +1,14 @@
 // Catálogo exibido na página inicial (/).
 // Para adicionar um modelo: inclua um item aqui e salve a captura em public/previews/<slug>.jpg (1440×900).
+// Modelo privado: marque `privado: true` — some do catálogo e do Google, mas abre pelo link direto.
+// No layout do modelo, adicione também `robots: { index: false, follow: false }` ao metadata.
 export type Modelo = {
   slug: string;
   nome: string;
   segmento: string;
   descricao: string;
   destaques: string[];
+  privado?: boolean;
 };
 
 export const modelos: Modelo[] = [
@@ -37,6 +40,7 @@ export const modelos: Modelo[] = [
     descricao:
       "Profissional autônoma de pilates: visual editorial em marfim, rosa e verde sálvia, com formas orgânicas.",
     destaques: ["Agendamento pelo WhatsApp", "Como funciona", "Perguntas frequentes"],
+    privado: true,
   },
   {
     slug: "sara-editorial",
@@ -47,7 +51,7 @@ export const modelos: Modelo[] = [
     destaques: ["Carrossel de aulas", "Busca de conteúdos", "Fotos reais"],
   },
   {
-    slug: "clinica-rosa",
+    slug: "movimenta-fisioterapia",
     nome: "Movimenta",
     segmento: "Pilates e fisioterapia",
     descricao:
@@ -55,6 +59,8 @@ export const modelos: Modelo[] = [
     destaques: ["Agendamento pelo WhatsApp", "Depoimentos em carrossel", "Etapas do atendimento"],
   },
 ];
+
+export const modelosPublicos = modelos.filter((m) => !m.privado);
 
 // Destino dos botões "Quero meu site" do catálogo (WhatsApp da Potencializa).
 export const contatoUrl = "https://wa.me/5554991412254?text=Quero%20criar%20meu%20site";

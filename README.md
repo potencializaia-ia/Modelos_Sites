@@ -8,9 +8,9 @@ Todos os modelos rodam no mesmo link. A página inicial (`/`) é um catálogo co
 | Lumident (odontologia, azul) | `/lumident` | `src/app/lumident/`, `src/components/*` |
 | Sorriso (odontologia, lilás) | `/sorriso` | `src/app/sorriso/`, `src/components/sorriso/` |
 | Dentora (odontologia, inglês) | `/dentora` | `dentora/` (Vite) |
-| Sara Scapini (pilates, marfim e sálvia) | `/sara-pilates` | `src/app/sara-pilates/`, `src/components/pilates/` (textos e dados em `content.ts`) |
+| Sara Scapini (pilates, marfim e sálvia) — **privado** | `/sara-pilates` | `src/app/sara-pilates/`, `src/components/pilates/` (textos e dados em `content.ts`) |
 | Sara Scapini Editorial (pilates, verde e terracota) | `/sara-editorial` | `src/app/sara-editorial/`, `src/components/sara-editorial/` (textos e dados em `content.ts`, fotos em `public/images/sara-editorial/`) |
-| Movimenta (clínica de Pilates e fisioterapia, rosa) | `/clinica-rosa` | `src/app/clinica-rosa/`, `src/components/clinica-rosa/` (textos e dados em `content.ts`, fotos em `public/images/clinica-rosa/`) |
+| Movimenta (clínica de Pilates e fisioterapia, rosa) | `/movimenta-fisioterapia` | `src/app/movimenta-fisioterapia/`, `src/components/clinica-rosa/` (textos e dados em `content.ts`, fotos em `public/images/clinica-rosa/`) |
 
 ## Como funciona
 
