@@ -13,6 +13,7 @@ for (const modelo of modelos) {
   const run = (cmd) => execSync(cmd, { cwd, stdio: "inherit" });
 
   console.log(`\n▶ ${modelo}`);
-  if (!existsSync(path.join(cwd, "node_modules"))) run("npm ci");
+  // --include=dev: a Vercel roda com NODE_ENV=production, que pularia o Vite (devDependency).
+  if (!existsSync(path.join(cwd, "node_modules"))) run("npm ci --include=dev");
   run(`npm run build -- --base=/${modelo}/ --outDir=../public/${modelo} --emptyOutDir`);
 }
