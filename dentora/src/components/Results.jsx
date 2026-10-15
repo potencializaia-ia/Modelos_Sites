@@ -12,19 +12,19 @@ const testimonials = [
     quote: 'Personalized dental treatments and gentle care from the first visit. I finally feel confident smiling in photos again.',
     name: 'Jenny Wilson',
     detail: 'Teeth Cleaning · 2 visits',
-    avatar: '/images/avatar-review.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/avatar-review.jpg`,
   },
   {
     quote: 'My kids actually look forward to their check-ups. The team explains every step and never rushes anything.',
     name: 'Marcus Reed',
     detail: 'Family Checkups · 3 years',
-    avatar: '/images/patient-man.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/patient-man.jpg`,
   },
   {
     quote: 'The retainer plan was clear, affordable and fast. Modern technology, but it still feels personal.',
     name: 'Sofia Martins',
     detail: 'Retainers · 6 months',
-    avatar: '/images/patient-woman.jpg',
+    avatar: `${import.meta.env.BASE_URL}images/patient-woman.jpg`,
   },
 ]
 
@@ -54,7 +54,7 @@ export default function Results() {
 
       <div className="results__grid">
         <figure className="results__photo">
-          <img src="/images/results-smile.jpg" alt="Close-up of a woman with a bright, healthy smile" loading="lazy" />
+          <img src={`${import.meta.env.BASE_URL}images/results-smile.jpg`} alt="Close-up of a woman with a bright, healthy smile" loading="lazy" />
         </figure>
 
         <article className="stat-card">

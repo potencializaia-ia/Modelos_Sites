@@ -1,18 +1,53 @@
-# Modelos de site — Odontologia
+# Modelos de sites — Potencializa
 
-Dois modelos de landing page no mesmo projeto:
+Todos os modelos rodam no mesmo link. A página inicial (`/`) é um catálogo com a prévia de cada modelo.
 
 | Modelo | URL | Código |
 | --- | --- | --- |
-| 1 · Lumident (azul, dente 3D) | http://localhost:3000/ | `src/app/page.tsx`, `src/components/*` |
-| 2 · Sorriso (painel branco, lilás) | http://localhost:3000/sorriso | `src/app/sorriso/`, `src/components/sorriso/` |
+| Catálogo | `/` | `src/app/page.tsx`, dados em `src/data/modelos.ts` |
+| Lumident (odontologia, azul) | `/lumident` | `src/app/lumident/`, `src/components/*` |
+| Sorriso (odontologia, lilás) | `/sorriso` | `src/app/sorriso/`, `src/components/sorriso/` |
+| Dentora (odontologia, inglês) | `/dentora` | `dentora/` (Vite) |
+| Sara Scapini (pilates, marfim e sálvia) | `/sara-pilates` | `src/app/sara-pilates/`, `src/components/pilates/` (textos e dados em `content.ts`) |
+| Sara Scapini Editorial (pilates, verde e terracota) | `/sara-editorial` | `src/app/sara-editorial/`, `src/components/sara-editorial/` (textos e dados em `content.ts`, fotos em `public/images/sara-editorial/`) |
+| Movimenta (clínica de Pilates e fisioterapia, rosa) | `/clinica-rosa` | `src/app/clinica-rosa/`, `src/components/clinica-rosa/` (textos e dados em `content.ts`, fotos em `public/images/clinica-rosa/`) |
 
-O modelo 2 usa CSS Module próprio (`sorriso.module.css`) e fonte Inter; não interfere no modelo 1.
-Fotos do modelo 2 em `public/images/sorriso/` (Unsplash — licença Unsplash). Nome, endereço, telefone e CRO são fictícios.
+## Como funciona
+
+- A raiz é um app Next.js. Lumident e Sorriso são rotas dele.
+- Os modelos em Vite são projetos independentes (hoje só o Dentora). `npm run build` executa `scripts/build-modelos.mjs`,
+  que compila cada um com `--base=/<modelo>/` e coloca o resultado em `public/<modelo>/`
+  (pasta ignorada pelo git). O `next.config.ts` aponta `/<modelo>` para o `index.html` compilado.
+- Nos modelos Vite, imagens de `public/` devem ser referenciadas com `import.meta.env.BASE_URL`
+  (ex.: `` `${import.meta.env.BASE_URL}images/foto.jpg` ``), nunca com `/images/...`, senão quebram no subcaminho.
+
+## Rodar
+
+```bash
+npm install
+npm run build:modelos   # compila os modelos Vite (necessário uma vez para vê-los no `npm run dev`)
+npm run dev             # http://localhost:3000
+npm run build && npm start   # produção
+```
+
+Para editar um modelo Vite com recarregamento automático, rode `npm run dev` dentro da pasta dele.
+
+## Publicar na Vercel
+
+Importe o repositório na Vercel sem alterar nada: framework **Next.js**, diretório raiz `/`,
+comando de build padrão (`npm run build`). O build já compila os modelos Vite.
+
+## Adicionar um novo modelo
+
+1. **Next.js:** crie `src/app/<slug>/` (com `layout.tsx` para título e descrição próprios).
+   **Vite:** crie a pasta `<slug>/` na raiz e adicione o nome em `scripts/build-modelos.mjs`,
+   `next.config.ts`, `.gitignore`, `tsconfig.json` (exclude) e `eslint.config.mjs` (ignores).
+2. Adicione o modelo em `src/data/modelos.ts`.
+3. Salve uma captura 1440×900 em `public/previews/<slug>.jpg`.
 
 ---
 
-# Modelo 1 — Lumident Odontologia
+# Modelo Lumident Odontologia
 
 Front-end estático (demonstração) em **Next.js 16 (App Router) + React 19 + TypeScript + Tailwind CSS v4 + Lucide React**.
 
@@ -20,7 +55,7 @@ Front-end estático (demonstração) em **Next.js 16 (App Router) + React 19 + T
 
 ```bash
 npm install
-npm run dev     # http://localhost:3000
+npm run dev     # http://localhost:3000/lumident
 npm run build && npm start   # produção
 ```
 
@@ -50,3 +85,5 @@ public/images/            fotos (Unsplash — licença Unsplash)
 - Nomes, CRO, preços, telefone e endereço são fictícios.
 - As fotos da equipe são de banco de imagens. Para uma clínica real, use fotos dos profissionais de verdade.
 - A cor principal foi levemente escurecida (`#3A78B8` em vez de `#3F7FC1`) para garantir contraste AA do texto branco nos botões.
+
+> As pastas `delicias-mamae/` e `dgustame/` são projetos de clientes e **não** fazem parte do catálogo nem do build.

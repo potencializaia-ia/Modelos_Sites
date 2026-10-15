@@ -19,8 +19,8 @@ export default function Treatments() {
 
         <article className="doctor">
           <div className="doctor__photo">
-            <img src="/images/doctor-daniel.jpg" alt="Portrait of Dr. Daniel Carter" loading="lazy" />
-            <img className="doctor__inset" src="/images/clinic-room.jpg" alt="" loading="lazy" />
+            <img src={`${import.meta.env.BASE_URL}images/doctor-daniel.jpg`} alt="Portrait of Dr. Daniel Carter" loading="lazy" />
+            <img className="doctor__inset" src={`${import.meta.env.BASE_URL}images/clinic-room.jpg`} alt="" loading="lazy" />
           </div>
           <div className="doctor__body">
             <h3>Dr. Daniel Carter</h3>
@@ -38,7 +38,7 @@ export default function Treatments() {
       <div className="treatments__visual">
         <img
           className="treatments__photo"
-          src="/images/clinic-room.jpg"
+          src={`${import.meta.env.BASE_URL}images/clinic-room.jpg`}
           alt="Bright modern dental room with treatment chair, overhead light and natural daylight"
           loading="lazy"
         />

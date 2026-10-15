@@ -15,8 +15,8 @@ export default function About() {
       </h2>
 
       <div className="about__portraits">
-        <img src="/images/patient-man.jpg" alt="Smiling male patient" loading="lazy" />
-        <img src="/images/patient-woman.jpg" alt="Laughing female patient" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}images/patient-man.jpg`} alt="Smiling male patient" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}images/patient-woman.jpg`} alt="Laughing female patient" loading="lazy" />
       </div>
 
       <div className="about__metrics">
@@ -32,7 +32,7 @@ export default function About() {
       </div>
 
       <figure className="about__photo">
-        <img src="/images/patient-chair.jpg" alt="Patient smiling in the dental chair during a check-up" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}images/patient-chair.jpg`} alt="Patient smiling in the dental chair during a check-up" loading="lazy" />
       </figure>
     </section>
   )

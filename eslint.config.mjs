@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Modelos em Vite (projetos independentes) e seus builds copiados para public/
+    "delicias-mamae/**",
+    "dentora/**",
+    "dgustame/**",
+    "public/**",
   ]),
 ]);
 

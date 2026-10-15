@@ -32,7 +32,7 @@ export default function Hero() {
       <div className="hero">
         <img
           className="hero__photo"
-          src="/images/hero-patient.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero-patient.jpg`}
           alt="Smiling patient in the dental chair while a gloved dentist examines her teeth with a mirror"
           fetchPriority="high"
         />
@@ -91,7 +91,7 @@ export default function Hero() {
         </div>
 
         <a href="#about" className="hero-card">
-          <img src="/images/hero-card.jpg" alt="" />
+          <img src={`${import.meta.env.BASE_URL}images/hero-card.jpg`} alt="" />
           <span className="hero-card__text">Restore natural health and a confident smile.</span>
           <span className="hero-card__meta">
             <span className="hero-card__rating">

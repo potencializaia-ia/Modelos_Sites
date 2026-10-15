@@ -1,10 +1,11 @@
 {
-  "name": "lumident",
+  "name": "modelos-sites",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build-modelos.mjs && next build",
+    "build:modelos": "node scripts/build-modelos.mjs",
     "start": "next start",
     "lint": "eslint"
   },

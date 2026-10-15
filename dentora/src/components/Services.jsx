@@ -2,7 +2,7 @@ import { ArrowRight, ArrowUpRight } from './Icons.jsx'
 
 const services = [
   {
-    image: '/images/service-checkup.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-checkup.jpg`,
     alt: 'Dentist examining teeth with a mirror and explorer',
     chip: 'Prevention',
     title: 'Dental Checkups & Early Diagnosis',
@@ -10,7 +10,7 @@ const services = [
     meta: '30 min · Every 6 months',
   },
   {
-    image: '/images/service-cleaning.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-cleaning.jpg`,
     alt: 'Hygienist cleaning a smiling patient’s teeth',
     chip: 'Hygiene',
     title: 'Professional Cleaning vs. Regular Brushing',
@@ -18,7 +18,7 @@ const services = [
     meta: '45 min · Twice a year',
   },
   {
-    image: '/images/service-braces.jpg',
+    image: `${import.meta.env.BASE_URL}images/service-braces.jpg`,
     alt: 'Close-up of teeth with orthodontic braces',
     chip: 'Orthodontics',
     title: 'Braces, Aligners & Retainers',

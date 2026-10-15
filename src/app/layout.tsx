@@ -10,13 +10,12 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Lumident Odontologia — Odontologia moderna para toda a família",
-  description:
-    "Clínica odontológica em São Paulo. Clínica geral, implantes, ortodontia, estética e clareamento com tecnologia moderna e atendimento humano.",
+  title: "Modelos de sites — Potencializa",
+  description: "Conheça os modelos de sites da Potencializa e escolha o ponto de partida para o seu.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#DCECF9",
+  themeColor: "#0F172A",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
