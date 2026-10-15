@@ -1,11 +1,20 @@
 import type { Metadata, Viewport } from "next";
 import { Kaushan_Script, Montserrat, Playfair_Display } from "next/font/google";
 
+// Um estilo por chamada: com style: ["normal", "italic"] o build na Vercel falha
+// ("next/font/google queries have exactly one entry").
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "500"],
-  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const playfairItalic = Playfair_Display({
+  variable: "--font-playfair-italic",
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
   display: "swap",
 });
 
@@ -33,5 +42,5 @@ export const viewport: Viewport = {
 };
 
 export default function SaraEditorialLayout({ children }: LayoutProps<"/sara-editorial">) {
-  return <div className={`${playfair.variable} ${montserrat.variable} ${kaushan.variable}`}>{children}</div>;
+  return <div className={`${playfair.variable} ${playfairItalic.variable} ${montserrat.variable} ${kaushan.variable}`}>{children}</div>;
 }

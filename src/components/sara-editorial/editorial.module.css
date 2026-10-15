@@ -20,6 +20,7 @@
   --gutter: 20px;
   --ease: cubic-bezier(0.25, 0.7, 0.25, 1);
   --serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --serif-italic: var(--font-playfair-italic), "Playfair Display", Georgia, serif;
   --sans: var(--font-montserrat), "Montserrat", ui-sans-serif, system-ui, sans-serif;
   --script: var(--font-kaushan), "Kaushan Script", cursive;
 
@@ -843,7 +844,7 @@
 .quoteBox blockquote {
   margin: 0 auto;
   max-width: 360px;
-  font-family: var(--serif);
+  font-family: var(--serif-italic);
   font-size: 15.5px;
   font-style: italic;
   line-height: 1.85;
