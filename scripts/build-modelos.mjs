@@ -5,7 +5,7 @@ import { execSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
-const modelos = ["dentora"];
+const modelos = ["dentora", "dgustame", "delicias-mamae"];
 const root = path.resolve(import.meta.dirname, "..");
 
 for (const modelo of modelos) {

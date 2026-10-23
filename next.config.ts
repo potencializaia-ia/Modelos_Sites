@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 // Modelos feitos em Vite: compilados para public/<modelo>/ por scripts/build-modelos.mjs.
-const modelosVite = ["dentora"];
+const modelosVite = ["dentora", "dgustame", "delicias-mamae"];
 
 const nextConfig: NextConfig = {
   // Endereços antigos que já podem ter sido enviados a clientes.

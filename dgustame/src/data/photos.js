@@ -4,7 +4,8 @@
  * Nenhuma foto autorizada do restaurante foi fornecida ainda. Enquanto `src`
  * for `null`, o componente <Photo> mostra uma imagem temporária identificada
  * como tal. Para usar a foto real, coloque o arquivo em `public/images/` e
- * informe o caminho, ex.: src: '/images/buffet.jpg'.
+ * informe o caminho com a base do Vite (o site roda em /dgustame/), ex.:
+ * src: `${import.meta.env.BASE_URL}images/buffet.jpg`.
  *
  * Use apenas fotos do próprio restaurante ou com autorização de uso.
  * Não use fotos de avaliações de terceiros nem imagens genéricas de banco.

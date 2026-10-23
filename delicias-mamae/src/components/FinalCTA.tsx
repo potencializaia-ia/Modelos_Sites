@@ -7,14 +7,14 @@ export default function FinalCTA() {
       <Reveal className="relative mx-auto max-w-[1220px] overflow-hidden rounded-[32px] bg-choco px-6 py-16 text-center sm:px-12 lg:py-20">
         {/* Composição lateral: brigadeiros + flores, afastados do texto */}
         <img
-          src="/images/cta-brigadeiros.jpg"
+          src={`${import.meta.env.BASE_URL}images/cta-brigadeiros.jpg`}
           alt=""
           loading="lazy"
           decoding="async"
           className="pointer-events-none absolute top-1/2 -left-24 hidden size-72 -translate-y-1/2 rounded-full object-cover opacity-90 ring-8 ring-white/10 lg:block xl:-left-16"
         />
         <img
-          src="/images/hero-brigadeiros.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero-brigadeiros.jpg`}
           alt=""
           loading="lazy"
           decoding="async"

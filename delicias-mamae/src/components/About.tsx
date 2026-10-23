@@ -8,7 +8,7 @@ export default function About() {
           <FloralSprig className="pointer-events-none absolute -top-10 -right-8 z-10 w-32 rotate-[25deg] sm:w-40" />
           {/* Foto ilustrativa: substitua por uma foto real da fundadora trabalhando. */}
           <img
-            src="/images/sobre-maos.jpg"
+            src={`${import.meta.env.BASE_URL}images/sobre-maos.jpg`}
             alt="Mãos preparando chocolate em uma tigela de vidro para a produção dos doces"
             loading="lazy"
             decoding="async"

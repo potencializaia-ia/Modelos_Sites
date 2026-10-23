@@ -42,3 +42,5 @@ next-env.d.ts
 
 # modelo Vite compilado por scripts/build-modelos.mjs
 /public/dentora/
+/public/dgustame/
+/public/delicias-mamae/

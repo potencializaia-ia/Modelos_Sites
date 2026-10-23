@@ -8,6 +8,8 @@ Todos os modelos rodam no mesmo link. A página inicial (`/`) é um catálogo co
 | Lumident (odontologia, azul) | `/lumident` | `src/app/lumident/`, `src/components/*` |
 | Sorriso (odontologia, lilás) | `/sorriso` | `src/app/sorriso/`, `src/components/sorriso/` |
 | Dentora (odontologia, inglês) | `/dentora` | `dentora/` (Vite) |
+| D'Gustame (restaurante, cliente) — **privado** | `/dgustame` | `dgustame/` (Vite) |
+| Delícias da Mamãe (doces, cliente) — **privado** | `/delicias-mamae` | `delicias-mamae/` (Vite) |
 | Sara Scapini (pilates, marfim e sálvia) — **privado** | `/sara-pilates` | `src/app/sara-pilates/`, `src/components/pilates/` (textos e dados em `content.ts`) |
 | Sara Scapini Editorial (pilates, verde e terracota) | `/sara-editorial` | `src/app/sara-editorial/`, `src/components/sara-editorial/` (textos e dados em `content.ts`, fotos em `public/images/sara-editorial/`) |
 | Movimenta (clínica de Pilates e fisioterapia, rosa) | `/movimenta-fisioterapia` | `src/app/movimenta-fisioterapia/`, `src/components/clinica-rosa/` (textos e dados em `content.ts`, fotos em `public/images/clinica-rosa/`) |
@@ -86,4 +88,4 @@ public/images/            fotos (Unsplash — licença Unsplash)
 - As fotos da equipe são de banco de imagens. Para uma clínica real, use fotos dos profissionais de verdade.
 - A cor principal foi levemente escurecida (`#3A78B8` em vez de `#3F7FC1`) para garantir contraste AA do texto branco nos botões.
 
-> As pastas `delicias-mamae/` e `dgustame/` são projetos de clientes e **não** fazem parte do catálogo nem do build.
+> `dgustame/` e `delicias-mamae/` são projetos de clientes: entram no build como privados (fora do catálogo e com `noindex`).

@@ -46,7 +46,7 @@ export default function Hero() {
           <FloralSprig className="pointer-events-none absolute -right-8 -bottom-10 z-10 w-28 rotate-[160deg] sm:w-36" />
           <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-[28px] bg-rose-light sm:translate-x-5 sm:translate-y-5" aria-hidden="true" />
           <img
-            src="/images/hero-brigadeiros.jpg"
+            src={`${import.meta.env.BASE_URL}images/hero-brigadeiros.jpg`}
             alt="Brigadeiros artesanais com granulado servidos em uma tigela em formato de coração, ao lado de uma colher de pau"
             width={1100}
             height={1300}

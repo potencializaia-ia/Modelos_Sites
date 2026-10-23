@@ -37,7 +37,7 @@ export const featuredProducts: FeaturedProduct[] = [
     description: 'Os sabores afetivos que não podem faltar em uma boa festa.',
     flavors: ['Brigadeiro', 'Beijinho', 'Ninho', 'Doce de leite'],
     image: {
-      src: '/images/tradicionais.jpg',
+      src: `${import.meta.env.BASE_URL}images/tradicionais.jpg`,
       alt: 'Brigadeiro tradicional coberto de granulado de chocolate, em primeiro plano',
     },
     menuTab: 'tradicionais',
@@ -49,7 +49,7 @@ export const featuredProducts: FeaturedProduct[] = [
     description: 'Combinações marcantes para surpreender seus convidados.',
     flavors: ['Caramelo', 'Prestígio', 'Churros', 'Ninho com Nutella', 'Romeu e Julieta', 'Brigadeiro formato flor'],
     image: {
-      src: '/images/gourmet.jpg',
+      src: `${import.meta.env.BASE_URL}images/gourmet.jpg`,
       alt: 'Brigadeiro gourmet partido ao meio mostrando o recheio cremoso',
       position: '50% 45%',
     },
@@ -62,7 +62,7 @@ export const featuredProducts: FeaturedProduct[] = [
     description: 'Cascas de chocolate com recheios cremosos e muito sabor.',
     flavors: [],
     image: {
-      src: '/images/trufas.jpg',
+      src: `${import.meta.env.BASE_URL}images/trufas.jpg`,
       alt: 'Trufas de chocolate em forminhas de papel',
     },
     menuTab: 'trufas',
@@ -85,12 +85,12 @@ export const orderSteps: OrderStep[] = [
 export type GalleryItem = { src: string; alt: string; caption: string; tall?: boolean }
 
 export const gallery: GalleryItem[] = [
-  { src: '/images/g-brigadeiros.jpg', alt: 'Brigadeiros tradicionais enrolados à mão', caption: 'Brigadeiros tradicionais', tall: true },
-  { src: '/images/g-bombons.jpg', alt: 'Docinhos gourmet com cobertura de chocolate em forminhas', caption: 'Docinhos gourmet' },
-  { src: '/images/g-recheio.jpg', alt: 'Doce aberto mostrando o recheio cremoso', caption: 'Recheios cremosos' },
-  { src: '/images/g-mesa2.jpg', alt: 'Mesa de festa com doces servidos em taça de cristal', caption: 'Mesas de festa', tall: true },
-  { src: '/images/g-presente.jpg', alt: 'Caixa de doces para presente decorada com flor rosa', caption: 'Caixas para presente' },
-  { src: '/images/g-personalizadas.jpg', alt: 'Docinhos de chocolate branco e ao leite servidos em um pequeno suporte', caption: 'Encomendas personalizadas' },
+  { src: `${import.meta.env.BASE_URL}images/g-brigadeiros.jpg`, alt: 'Brigadeiros tradicionais enrolados à mão', caption: 'Brigadeiros tradicionais', tall: true },
+  { src: `${import.meta.env.BASE_URL}images/g-bombons.jpg`, alt: 'Docinhos gourmet com cobertura de chocolate em forminhas', caption: 'Docinhos gourmet' },
+  { src: `${import.meta.env.BASE_URL}images/g-recheio.jpg`, alt: 'Doce aberto mostrando o recheio cremoso', caption: 'Recheios cremosos' },
+  { src: `${import.meta.env.BASE_URL}images/g-mesa2.jpg`, alt: 'Mesa de festa com doces servidos em taça de cristal', caption: 'Mesas de festa', tall: true },
+  { src: `${import.meta.env.BASE_URL}images/g-presente.jpg`, alt: 'Caixa de doces para presente decorada com flor rosa', caption: 'Caixas para presente' },
+  { src: `${import.meta.env.BASE_URL}images/g-personalizadas.jpg`, alt: 'Docinhos de chocolate branco e ao leite servidos em um pequeno suporte', caption: 'Encomendas personalizadas' },
 ]
 
 /* ---------- Depoimentos ---------- */
